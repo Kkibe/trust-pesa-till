@@ -1,10 +1,12 @@
 import './Contact.css';
 import PlayStoreImage from '../../assets/play_store.png';
 import { NavLink } from 'react-router-dom';
+import AppHelmet from '../../components/AppHelmet';
 
 const Contact = () => {
     return (
         <section className="speedyui speedyui-contact">
+            <AppHelmet title={"Contact"} />
             <div className="row justify-content-center text-center mb-4">
                 <div className="col-xl-7">
                     <span className="heading-label fw-semibold d-block mb-2 text-uppercase">Contact</span>

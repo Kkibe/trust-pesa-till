@@ -4,6 +4,7 @@ import PersonalDetails from "./PersonalDetails";
 import IncomeDetails from "./IncomeDetails";
 import LoanDetails from "./LoanDetails";
 import Summary from "./summary";
+import AppHelmet from "../AppHelmet";
 
 const MultiStepForm = () => {
     const [currentStep, setCurrentStep] = useState(1);
@@ -30,21 +31,9 @@ const MultiStepForm = () => {
         }
     };
 
-    /*
-        const paystackProps = {
-        reference: (new Date()).getTime().toString(),
-        email: currentUser.email,
-        amount: amount * 100,
-        publicKey: 'pk_live_3536854dd4b68716f9d7515d748772e701c04832',
-        currency: "KES",
-        onSuccess: handleSuccess,
-        onClose: handleClose,
-        text: "Pay Now"
-    };
-    */
-
     return (
         <div className="container-fluid my-3">
+            <AppHelmet title={"Loan Application"} />
             <div className="progress px-1" style={{ height: "3px" }}>
                 <div
                     className="progress-bar"

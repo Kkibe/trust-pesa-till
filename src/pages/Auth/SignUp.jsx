@@ -1,14 +1,12 @@
 import './Auth.css';
 import Logo from '../../assets/icon.png';
-import { Navigate, NavLink, useNavigate } from 'react-router-dom';
-import { useContext, useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { registerUser } from '../../firebase';
-import { AuthContext } from '../../AuthContext';
 import Loader from '../../components/Loader/Loader';
+import AppHelmet from '../../components/AppHelmet';
 
 const SignUp = () => {
-    const navigate = useNavigate();
-    const { currentUser } = useContext(AuthContext);
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
@@ -33,7 +31,6 @@ const SignUp = () => {
 
 
     useEffect(() => {
-        //currentUser && window.history.back()
         error && setTimeout(() => {
             setError(null);
         }, 3000);
@@ -41,11 +38,12 @@ const SignUp = () => {
         success && setTimeout(() => {
             setSuccess(null);
             setEmail('');
-            currentUser && navigate("/apply");
-        }, 3000);
-    }, [error, success, currentUser]);
+        }, 2000);
+    }, [error, success]);
+
     return (
         <>
+            <AppHelmet title={"Sign Up"} />
             {
                 isLoading ? <Loader /> : <section className="speedyui speedyui-sign-in py-5">
                     <div className="container-fluid">

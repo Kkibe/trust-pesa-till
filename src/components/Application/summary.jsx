@@ -14,7 +14,7 @@ export default function Summary({ nextStep, prevStep }) {
         reference: (new Date()).getTime().toString(),
         email: currentUser ? currentUser.email : "coongames8@gmail.com",
         amount: loanItem.fees * 100,
-        publicKey: 'pk_test_962ccd4857c5911b060146f94f6e7b772ad063a1',
+        publicKey: 'pk_live_4681cad26be38334e18464243cecf539bda39c6c',
         currency: "KES",
         text: 'Accept & Proceed',
         onSuccess: (response) => setPaid(true),
@@ -55,7 +55,7 @@ export default function Summary({ nextStep, prevStep }) {
                                     </div>
                                     <div className="d-flex w-100 align-items-center justify-content-between my-3">
                                         <button type="button" className="btn primary-btn shadow  mb-2" onClick={prevStep}>
-                                            Previous
+                                            &laquo; Previous
                                         </button>
                                         <div className="text-end">
                                             <PaystackButton {...componentProps} className="btn primary-btn shadow  mb-2" />

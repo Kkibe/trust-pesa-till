@@ -1,0 +1,6 @@
+# Allow all bots
+User-agent: *
+Disallow:
+
+# Specify the sitemap location
+Sitemap: https://trustpesa.onrender.com/sitemap.xml

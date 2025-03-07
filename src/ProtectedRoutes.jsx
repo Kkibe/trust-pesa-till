@@ -9,8 +9,10 @@ export const ProtectedAuthRoute = ({ children }) => {
 
     useEffect(() => {
         if (currentUser) {
-            const previousPath = location.state?.from || '/';
-            navigate(previousPath, { replace: true });
+            const previousPath = location.state?.from || '/apply';
+            currentUser && setTimeout(() => {
+                navigate(previousPath, { replace: true });
+            }, 2500);
         }
     }, [currentUser, navigate, location]);
 

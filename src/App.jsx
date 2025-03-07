@@ -46,7 +46,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<ProtectedAuthRoute><SignIn /></ProtectedAuthRoute>} />
-            <Route path="/register" element={<SignUp />} />
+            <Route path="/register" element={<ProtectedAuthRoute><SignUp /></ProtectedAuthRoute>} />
             <Route path="/apply" element={<ProtectedRoute><MultiStepForm userData={userData} /></ProtectedRoute>} />
             <Route path="*" element={<Error404 />} />
           </Routes>

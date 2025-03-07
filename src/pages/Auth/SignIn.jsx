@@ -1,14 +1,12 @@
 import './Auth.css';
 import Logo from '../../assets/icon.png';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { useContext, useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { signInUser } from '../../firebase';
-import { AuthContext } from '../../AuthContext';
 import Loader from '../../components/Loader/Loader';
+import AppHelmet from '../../components/AppHelmet';
 
 const SignIn = () => {
-    const navigate = useNavigate();
-    const { currentUser } = useContext(AuthContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(null);
@@ -22,7 +20,6 @@ const SignIn = () => {
         setIsLoading(true);
 
         setTimeout(() => {
-            // Call the registerUser function
             signInUser(email, password, setSuccess, setError);
             setIsLoading(false); // Once the registration attempt finishes
         }, 1000)
@@ -30,7 +27,6 @@ const SignIn = () => {
 
 
     useEffect(() => {
-        //currentUser && window.history.back()
         error && setTimeout(() => {
             setError(null);
         }, 3000);
@@ -38,11 +34,11 @@ const SignIn = () => {
         success && setTimeout(() => {
             setSuccess(null);
             setEmail('');
-            currentUser && navigate("/apply");
-        }, 3000);
-    }, [error, success, currentUser]);
+        }, 2000);
+    }, [error, success]);
     return (
         <>
+            <AppHelmet title={"Sign In"} />
             {
                 isLoading ? <Loader /> : <section className="speedyui speedyui-sign-in py-5">
                     <div className="container-fluid">
