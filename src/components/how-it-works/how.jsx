@@ -1,5 +1,5 @@
 import './how.css';
-
+import Image from '../../assets/loan-approval.jpg';
 const HowItWorks = () => {
     return (
         <section className="speedyui speedyui-work-process py-5" id='how-it-works'>
@@ -16,7 +16,7 @@ const HowItWorks = () => {
                     <div className="col-lg-5">
                         <div className="position-relative">
                             <img
-                                src="https://speedyui-static.s3.amazonaws.com/how-it-works/how-it-works/how-it-works-7/img.jpg"
+                                src={Image}
                                 className="img-fluid rounded-3"
                                 alt="How It Works"
                             />
@@ -26,7 +26,22 @@ const HowItWorks = () => {
                     <div className="col-lg-7">
                         <div className="content-wrapper">
                             <div className="row">
-                                {["Find Your Style", "Register Account", "Start Creating", "Start Creating"].map((title, index) => (
+                                {[{
+                                    title: "Register Your Account",
+                                    description: "Create an account with us for quick and secure processing of your loan application.",
+                                },
+                                {
+                                    title: "Apply for a Loan",
+                                    description: "Complete a simple online application form with your loan details.",
+                                },
+                                {
+                                    title: "Get Approved Fast",
+                                    description: "Our system quickly reviews your application, and we approve your loan within 24 hours.",
+                                },
+                                {
+                                    title: "Receive Funds Instantly",
+                                    description: "Once approved, your loan is disbursed directly to your M-Pesa account—no paperwork, no hassle.",
+                                }].map((item, index) => (
                                     <div className="col-md-6" key={index}>
                                         <div className="feature-wrapper d-flex flex-column text-center text-md-start my-xl-2 py-2">
                                             <div className="mb-3">
@@ -35,9 +50,9 @@ const HowItWorks = () => {
                                                 </span>
                                             </div>
                                             <div className="feature-info">
-                                                <h5 className="fw-semibold mb-3">{title}</h5>
+                                                <h5 className="fw-semibold mb-3">{item.title}</h5>
                                                 <p className="fs-6 text-muted fw-light lh-lg">
-                                                    Lorem ipsum dolor sit amet consectetur adipiscing elit et fames maecenas amet est scelerisque lectus tortor sit
+                                                    {item.description}
                                                 </p>
                                             </div>
                                         </div>

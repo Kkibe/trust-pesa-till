@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom';
 import './Hero.css';
 import { useContext } from 'react';
 import { AuthContext } from '../../AuthContext';
+import Image from '../../assets/loan-approved.webp';
 
 const HeroSection = () => {
     const { currentUser } = useContext(AuthContext);
@@ -37,7 +38,7 @@ const HeroSection = () => {
                     </div>
                     <div className="col-lg-6 py-3">
                         <div className="hero-img-wrapper shadow mx-auto my-3">
-                            <img src="https://speedyui-static.s3.amazonaws.com/hero-section/hero-6/hero-img.jpg" className="img-fluid hero-img" alt="Hero" />
+                            <img src={Image} className="img-fluid hero-img" alt="Hero" />
                         </div>
                     </div>
                 </div>
