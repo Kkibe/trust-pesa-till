@@ -1,0 +1,126 @@
+.speedyui-sign-in {
+    /*background: linear-gradient(to top right, #6f45e213, #ffffff, #38f9d62a);*/
+}
+
+.speedyui-sign-in h1,
+.speedyui-sign-in h2,
+.speedyui-sign-in h3,
+.speedyui-sign-in h4,
+.speedyui-sign-in h5,
+.speedyui-sign-in h6,
+.speedyui-sign-in p {
+    margin: 0;
+}
+
+.speedyui-sign-in a {
+    color: var(--su-primary-color);
+}
+
+.speedyui-sign-in .icon-wrapper .icon {
+    color: var(--su-primary-color);
+}
+
+.speedyui-sign-in .form-control {
+    padding: 1rem 1.25rem;
+    border-color: #dddddd;
+    background-color: transparent;
+    font-weight: 400;
+}
+
+.speedyui-sign-in .form-control:focus-visible,
+.speedyui-sign-in .form-control:focus {
+    outline: none;
+    border: 1px solid var(--su-primary-color);
+    box-shadow: none;
+}
+
+.speedyui-sign-in .primary-btn {
+    background: linear-gradient(to top right, #6a36fb, #913add);
+    color: #fff;
+    transition: 0.3s ease-out;
+    overflow: hidden;
+    position: relative;
+    font-weight: 600;
+    z-index: 0;
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+    border: none;
+}
+
+.speedyui-sign-in .primary-btn:after {
+    transition: all 0.3s;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.speedyui-sign-in .primary-btn:before,
+.speedyui-sign-in .primary-btn:after {
+    background: var(--bs-dark);
+    content: '';
+    position: absolute;
+    z-index: -1;
+}
+
+.speedyui-sign-in .primary-btn:hover {
+    border-color: var(--bs-dark);
+}
+
+.speedyui-sign-in .primary-btn:hover:after {
+    opacity: .2;
+}
+
+.speedyui-sign-in .secondary-btn {
+    background-color: #fff;
+    color: var(--bs-secondary);
+    transition: 0.3s ease-out;
+    overflow: hidden;
+    position: relative;
+    font-weight: 500;
+    z-index: 0;
+    font-size: 15px;
+    padding: 1rem 1rem;
+    border-color: #dddddd;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .speedyui-sign-in .secondary-btn {
+        font-size: 12px;
+    }
+}
+
+.speedyui-sign-in .secondary-btn.w-google .icon {
+    color: #e84234;
+    transition: all .3s;
+}
+
+.speedyui-sign-in .secondary-btn.w-google:hover {
+    background-color: #e84234;
+    border-color: #e84234;
+    color: #fff;
+}
+
+.speedyui-sign-in .secondary-btn.w-google:hover .icon {
+    color: #fff;
+}
+
+.speedyui-sign-in .secondary-btn.w-facebook .icon {
+    color: #1771e6;
+    transition: all .3s;
+}
+
+.speedyui-sign-in .secondary-btn.w-facebook:hover {
+    background-color: #1771e6;
+    border-color: #1771e6;
+    color: #fff;
+}
+
+.speedyui-sign-in .secondary-btn.w-facebook:hover .icon {
+    color: #fff;
+}
+
+.speedyui-sign-in ::placeholder {
+    opacity: .6;
+}

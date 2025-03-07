@@ -1,0 +1,36 @@
+.speedyui-work-process p {
+    margin-bottom: 0;
+}
+
+.speedyui-work-process .heading-label {
+    color: var(--su-primary-color);
+}
+
+.speedyui-work-process .feature-wrapper .number-wrapper {
+    width: 60px;
+    height: 60px;
+    background-color: var(--su-primary-color);
+    color: #fff;
+    transition: all .3s;
+}
+
+.speedyui-work-process .feature-wrapper:hover .number-wrapper {
+    transform: translateY(-3px);
+}
+
+.speedyui-work-process .circle-shape {
+    width: 10rem;
+    height: 10rem;
+    opacity: .05;
+    background-color: transparent;
+    border: 15px solid var(--bs-dark);
+    z-index: -1;
+}
+
+.speedyui-work-process .feature-info h5 {
+    transition: all .3s;
+}
+
+.speedyui-work-process .feature-info h5:hover {
+    color: var(--su-primary-color);
+}

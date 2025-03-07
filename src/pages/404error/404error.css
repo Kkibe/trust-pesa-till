@@ -1,0 +1,18 @@
+.speedyui-404 h1,
+.speedyui-404 h2,
+.speedyui-404 h3,
+.speedyui-404 h4,
+.speedyui-404 h5,
+.speedyui-404 h6,
+.speedyui-404 p {
+    margin: 0;
+}
+
+.speedyui-404 .primary-btn {
+    background-color: var(--su-primary-color);
+    color: #fff;
+}
+
+.speedyui-404 .primary-btn:hover {
+    background-color: var(--bs-dark);
+}

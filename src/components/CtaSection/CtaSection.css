@@ -1,0 +1,81 @@
+.speedyui-cta {
+    font-family: var(--su-primary-font);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+    .speedyui-cta {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+}
+
+.speedyui-cta::before {
+    position: absolute;
+    content: "";
+    background-image: url(https://speedyui-static.s3.amazonaws.com/cta/cta-6/cya-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--su-primary-color);
+    background-blend-mode: multiply;
+    z-index: -1;
+}
+
+.speedyui-cta h3 {
+    font-weight: 500;
+}
+
+.speedyui-cta .speedyui-btn {
+    z-index: 0;
+    padding: 0.7rem 2rem;
+    background-color: var(--su-seccondary-color);
+    transition: 0.3s cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+.speedyui-cta .speedyui-btn .btn-wrapper span{
+    color: var(--su-black-color);
+    transition: opacity 0.6s, transform 0.8s;
+    transition-timing-function: cubic-bezier(0.15, 0.85, 0.31, 1);
+}
+
+.speedyui-cta .speedyui-btn .btn-wrapper span:first-child {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.speedyui-cta .speedyui-btn .btn-wrapper span:last-child {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.speedyui-cta .speedyui-btn:hover {
+    color: var(--bs-white);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.speedyui-cta .speedyui-btn:hover .btn-wrapper span {
+    color: var(--su-black-color);
+}
+
+span a{
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.speedyui-cta .speedyui-btn:hover .btn-wrapper span:first-child {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.speedyui-cta .speedyui-btn:hover .btn-wrapper span:last-child {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*# sourceMappingURL=main.css.map */

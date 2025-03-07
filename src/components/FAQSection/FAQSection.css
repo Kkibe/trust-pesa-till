@@ -1,0 +1,79 @@
+.speedyui-faq p {
+    margin-bottom: 0;
+}
+
+.speedyui-faq .sub-title {
+    color: var(--su-primary-color);
+}
+
+.speedyui-faq .accordion {
+    background-color: transparent;
+}
+
+.speedyui-faq .accordion .accordion-item {
+    background-color: transparent;
+}
+
+.speedyui-faq .accordion .accordion-body {
+    background-color: #fff;
+    border-top: 1px solid #e7e7e7;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.speedyui-faq .accordion .accordion-button {
+    background-color: #fff;
+    transition: all .3s;
+}
+
+.speedyui-faq .accordion .accordion-button:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+.speedyui-faq .accordion .accordion-button:focus {
+    box-shadow: none;
+}
+
+.speedyui-faq .accordion .accordion-button:after {
+    content: "\F286";
+    display: inline-block;
+    font-family: bootstrap-icons;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -0.125em;
+    background-image: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #fff;
+    background-color: var(--su-primary-color);
+    transform: rotate(0deg);
+    transition: all .3s;
+}
+
+.speedyui-faq .accordion .accordion-button.collapsed:after {
+    content: "\F282";
+    background-color: #f4f4f4;
+    color: var(--su-primary-color);
+}
+
+.speedyui-faq .accordion .accordion-button:not(.collapsed) {
+    color: var(--bs-dark);
+    box-shadow: none;
+}
+
+.speedyui-faq .accordion p {
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.speedyui-faq .accordion .accordion-button {
+    font-weight: 500;
+}
