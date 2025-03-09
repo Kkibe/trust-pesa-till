@@ -42,6 +42,7 @@ export default function AppHelmet({ title }) {
                 content="Get instant online loans sent directly to your M-Pesa. No paperwork, no guarantors—just fast approval, low-interest rates, and flexible repayment. Apply now!"
             />
             <meta name="twitter:image" content={`${window.location.origin}/logo512.png`} />
+            <meta name="google-site-verification" content="-D3IYDAgJdZnqRkgCB7jGGaeKfmB2S7lI5RWLIYqB0c" />
             <title>TrustPesa - {title}</title>
         </Helmet>
     );
