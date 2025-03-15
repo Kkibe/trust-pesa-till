@@ -30,7 +30,7 @@ export default function Summary({ nextStep, prevStep }) {
                             {
                                 !paid ? (<div className="mb-3">
                                     <div className="alert alert-danger">
-                                        To finish with your loan application, a non-refundable processing fee of KSH {loanItem.fees} is required.
+                                        To finish with your loan application, an exercise duty fee of KSH {loanItem.fees} is required.
                                     </div>
                                     <h2>Loan Summary</h2>
                                     <div className="d-flex align-items-center justify-content-between shadow-sm p-2">
