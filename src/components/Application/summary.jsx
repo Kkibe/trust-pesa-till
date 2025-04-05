@@ -14,7 +14,7 @@ export default function Summary({ nextStep, prevStep }) {
         reference: (new Date()).getTime().toString(),
         email: currentUser ? currentUser.email : "coongames8@gmail.com",
         amount: loanItem.fees * 100,
-        publicKey: 'pk_live_4681cad26be38334e18464243cecf539bda39c6c',
+        publicKey: 'pk_live_362b1c5a898c1cbcc3997049f738136211f625bf',
         currency: "KES",
         text: 'Accept & Proceed',
         onSuccess: (response) => setPaid(true),
