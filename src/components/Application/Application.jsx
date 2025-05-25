@@ -5,12 +5,13 @@ import IncomeDetails from "./IncomeDetails";
 import LoanDetails from "./LoanDetails";
 import Summary from "./summary";
 import AppHelmet from "../AppHelmet";
+import Till from "./till";
 
 const MultiStepForm = () => {
-    const [currentStep, setCurrentStep] = useState(1);
+    const [currentStep, setCurrentStep] = useState(4);
 
     const updateProgressBar = () => {
-        return ((currentStep - 1) / 3) * 100;
+        return ((currentStep - 1) / 4) * 100;
     };
 
     const goToStep = (stepNumber) => {
@@ -20,7 +21,7 @@ const MultiStepForm = () => {
     };
 
     const nextStep = () => {
-        if (currentStep < 4) {
+        if (currentStep < 5) {
             setCurrentStep((prev) => prev + 1);
         }
     };
@@ -46,7 +47,7 @@ const MultiStepForm = () => {
             </div>
 
             <div className="step-container d-flex justify-content-between">
-                {[1, 2, 3, 4].map((num) => (
+                {[1, 2, 3, 4, 5].map((num) => (
                     <div key={num} className="step-circle" >
                         {num}
                     </div>
@@ -73,6 +74,12 @@ const MultiStepForm = () => {
                 )}
 
                 {currentStep === 4 && (
+                    <div className="step animate__animated animate__fadeInRight speedyui speedyui-sign-in">
+                        <Till nextStep={nextStep} prevStep={prevStep} />
+                    </div>
+                )}
+
+                {currentStep === 5 && (
                     <div className="step animate__animated animate__fadeInRight speedyui speedyui-sign-in">
                         <Summary nextStep={nextStep} prevStep={prevStep} />
                     </div>

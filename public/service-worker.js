@@ -2,8 +2,7 @@ const CACHE_NAME = 'trustpesa-cache';
 const urlsToCache = [
     '/',
     '/index.html',
-    '/manifest.json',
-    '*'
+    '/manifest.json'
 ];
 
 
