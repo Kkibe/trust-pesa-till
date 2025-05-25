@@ -8,7 +8,7 @@ import AppHelmet from "../AppHelmet";
 import Till from "./till";
 
 const MultiStepForm = () => {
-    const [currentStep, setCurrentStep] = useState(4);
+    const [currentStep, setCurrentStep] = useState(1);
 
     const updateProgressBar = () => {
         return ((currentStep - 1) / 4) * 100;
