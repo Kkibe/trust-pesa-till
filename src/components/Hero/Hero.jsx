@@ -22,7 +22,7 @@ const HeroSection = () => {
                                 You can qualify for upto Ksh 100,000 instant loan to MPESA
                             </p>
                             {
-                                currentUser ? </NavLink> : <NavLink to="/apply" className="btn btn-md px-5 py-3 me-3 primary-btn rounded-0 border-0">
+                                currentUser ? <NavLink to="/apply" className="btn btn-md px-5 py-3 me-3 primary-btn rounded-0 border-0">
                                     Get started
                                 </NavLink> : <NavLink to="/register" className="btn btn-md px-5 py-3 me-3 primary-btn rounded-0 border-0">
                                     Apply Now
